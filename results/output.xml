@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.8.10 on linux)" generated="20220508 15:01:02.280" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="/home/pedro/Área de Trabalho/Atividade-Faculdade/Trabalho-qualidade-de-software/Test/test.robot">
+<test id="s1-t1" name="Cenário 1: Preencher formulário" line="27">
+<kw name="abrir navegador e acessar a aplicação">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://pedro-dev-si.github.io/binary-converter/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220508 15:01:02.412" level="INFO">Opening browser 'chrome' to base url 'https://pedro-dev-si.github.io/binary-converter/'.</msg>
+<status status="PASS" starttime="20220508 15:01:02.412" endtime="20220508 15:01:03.908"/>
+</kw>
+<status status="PASS" starttime="20220508 15:01:02.412" endtime="20220508 15:01:03.909"/>
+</kw>
+<kw name="inserir um valor decimal no campo">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_decimal}</arg>
+<arg>40</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220508 15:01:03.911" level="INFO">Typing text '40' into text field 'id:dec-input'.</msg>
+<status status="PASS" starttime="20220508 15:01:03.910" endtime="20220508 15:01:04.017"/>
+</kw>
+<status status="PASS" starttime="20220508 15:01:03.909" endtime="20220508 15:01:04.017"/>
+</kw>
+<kw name="inserir um valor binário no campo">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_binary}</arg>
+<arg>01</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220508 15:01:04.019" level="INFO">Typing text '01' into text field 'id:bin-input'.</msg>
+<status status="PASS" starttime="20220508 15:01:04.018" endtime="20220508 15:01:04.113"/>
+</kw>
+<status status="PASS" starttime="20220508 15:01:04.018" endtime="20220508 15:01:04.113"/>
+</kw>
+<status status="PASS" starttime="20220508 15:01:02.411" endtime="20220508 15:01:04.114"/>
+</test>
+<test id="s1-t2" name="Cenário 2: Converter" line="32">
+<kw name="converter de decimal para binário">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${convert-bin-btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220508 15:01:04.117" level="INFO">Clicking element 'name:convert-to-bin'.</msg>
+<status status="PASS" starttime="20220508 15:01:04.117" endtime="20220508 15:01:04.168"/>
+</kw>
+<status status="PASS" starttime="20220508 15:01:04.116" endtime="20220508 15:01:04.168"/>
+</kw>
+<kw name="converter de binário para decimal">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${convert-dec-btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220508 15:01:04.169" level="INFO">Clicking element 'name:convert-to-dec'.</msg>
+<status status="PASS" starttime="20220508 15:01:04.169" endtime="20220508 15:01:04.211"/>
+</kw>
+<status status="PASS" starttime="20220508 15:01:04.169" endtime="20220508 15:01:04.211"/>
+</kw>
+<status status="PASS" starttime="20220508 15:01:04.115" endtime="20220508 15:01:04.212"/>
+</test>
+<status status="PASS" starttime="20220508 15:01:02.281" endtime="20220508 15:01:04.213"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
